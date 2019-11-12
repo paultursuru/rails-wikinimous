@@ -1,0 +1,18 @@
+<h2 class="margin-topping">Edit Article : <%= @article.title %> </h2>
+
+<%= form_for(@article) do |a| %>
+
+  <div class="form-group">
+    <%= a.label :title %>
+    <%= a.text_field :title, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= a.label :content %>
+    <%= a.text_area :content, class: 'form-control' %>
+  </div>
+
+  <%= a.submit class: 'btn greenbutton' %>
+<% end %>
+
+<%= link_to "back to list", articles_path, class: 'btn bluebutton margin-topping' %>

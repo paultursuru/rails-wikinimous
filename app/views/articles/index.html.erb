@@ -1,0 +1,15 @@
+<h1>Food Articles</h1>
+
+<ul>
+  <% @articles.each do |a| %>
+    <li>
+      <div class="row justify-content-between">
+        <h3> <%= link_to a.title, article_path(a) %> </h3>
+        <h4> <%= link_to "🗑", article_path(a), method: :delete %> </h4>
+      </div>
+      <p> <%= a.content.byteslice(0, 150) %> <%= link_to '...', article_path(a)  %> </p>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to '🥨 add a new article !', new_article_path, class: 'btn bellebarre'%>

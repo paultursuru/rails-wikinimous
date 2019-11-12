@@ -1,0 +1,15 @@
+<div class="row justify-content-between margin-topping">
+  <h2>
+    <%= @article.title %>
+  </h2>
+  <h2>
+    <%= link_to '✏️', edit_article_path, class: 'btn greenbutton' %>
+  </h2>
+</div>
+
+<p class="margin-topping">
+  <%= @article.content %>
+</p>
+
+
+<%= link_to 'back to list', articles_path, class: 'btn bluebutton' %>
